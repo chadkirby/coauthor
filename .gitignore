@@ -1,0 +1,22 @@
+# Node / JS
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+
+# SwiftPM
+.build/
+.swiftpm/
+Package.resolved
+
+# macOS / OS
+.DS_Store
+*.swp
+*.orig
+
+# Cloudflare / Wrangler
+.wrangler/
+
+# Test / Coverage
+coverage/
+.vitest/

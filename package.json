@@ -1,0 +1,58 @@
+{
+  "name": "@ckirby/coauthor",
+  "version": "0.1.0",
+  "description": "Edge-native local-first sync and AI co-authoring engine for Cloudflare Durable Objects and Swift",
+  "type": "module",
+  "packageManager": "pnpm@12.14.0",
+  "engines": {
+    "node": ">=26.0.0",
+    "pnpm": ">=12.0.0"
+  },
+  "main": "./dist/core/index.js",
+  "types": "./dist/core/index.d.ts",
+  "exports": {
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js"
+    },
+    "./do": {
+      "types": "./dist/do/index.d.ts",
+      "import": "./dist/do/index.js"
+    },
+    "./agent": {
+      "types": "./dist/agent/index.d.ts",
+      "import": "./dist/agent/index.js"
+    },
+    "./wasi": {
+      "types": "./dist/wasi/index.d.ts",
+      "import": "./dist/wasi/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "local-first",
+    "crdt",
+    "semilattice",
+    "cloudflare-workers",
+    "durable-objects",
+    "ai-coauthoring",
+    "sync"
+  ],
+  "author": "Chad Kirby <chad.kirby@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261019.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
